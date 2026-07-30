@@ -169,5 +169,5 @@ def get_jobs(agent,
     return code
 
 #==================display code for jobs searching==============
-"""code=get_jobs(agent)
-DISPLAY.HTML(code)"""
+# """code=get_jobs(agent)
+# DISPLAY.HTML(code)"""
