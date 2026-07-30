@@ -2,6 +2,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_groq import ChatGroq
 import langchain
 from langchain.agents import create_agent
+from tavily import TavilyClient
 import pytesseract as pyt
 import streamlit as st
 import os
@@ -21,8 +22,8 @@ model=ChatGoogleGenerativeAI(
     google_api_key=GOOGLE_API_KEY
 )
 
-response= model.invoke("Hey bro ,how are you?")
-response.content[-1]['text']
+'''response= model.invoke("Hey bro ,how are you?")
+response.content[-1]['text']'''
 
 #=============tavily api key================
 def search_latest_news_jobs(query):
@@ -39,7 +40,7 @@ agent = create_agent(
     model=model,
     tools=[search_latest_news_jobs]
 )
-agent
+
 
 #=======================main code to create resume using agent=====================
 
@@ -94,9 +95,9 @@ def main_agent(agent,query):
   return code
 
 #==============display code (resume)=========
-code = main_agent(agent, "ALAN TURING, GEN AI EXPERT")
+'''code = main_agent(agent, "ALAN TURING, GEN AI EXPERT")
 from IPython import display as DISPLAY
-DISPLAY.HTML(code)
+DISPLAY.HTML(code)'''
 
 #==================job_searching code================ 
 def get_jobs(agent,
@@ -115,5 +116,5 @@ def get_jobs(agent,
     return code
 
 #==================display code for jobs searching==============
-code=get_jobs(agent)
-DISPLAY.HTML(code)
+'''code=get_jobs(agent)
+DISPLAY.HTML(code)'''
