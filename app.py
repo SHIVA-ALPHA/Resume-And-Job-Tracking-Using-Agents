@@ -148,9 +148,9 @@ def get_jobs(agent,
 # DISPLAY.HTML(code)
 
 #==============display code (resume)=========
-"""code = main_agent(agent, "ALAN TURING, GEN AI EXPERT")
-from IPython import display as DISPLAY
-DISPLAY.HTML(code)"""
+# """code = main_agent(agent, "ALAN TURING, GEN AI EXPERT")
+# from IPython import display as DISPLAY
+# DISPLAY.HTML(code)"""
 
 #==================job_searching code================ 
 def get_jobs(agent,
