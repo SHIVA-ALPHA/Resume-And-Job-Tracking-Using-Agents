@@ -31,9 +31,9 @@ st.image("bg.jpg")
 
 # ========API KEYS============# 
 # Step 3 API keys
-TAVILY_API_KEY=st.sidebar.txt_input("Groq_API",type="password")
-GOOGLE_API_KEY=st.sidebar.txt_input("Groq_API",type="password")
-Groq_API_KEY=st.sidebar.txt_input("Groq_API",type="password")
+TAVILY_API_KEY=st.sidebar.text_input("Groq_API",type="password")
+GOOGLE_API_KEY=st.sidebar.text_input("Groq_API",type="password")
+Groq_API_KEY=st.sidebar.text_input("Groq_API",type="password")
 
 all_API=[TAVILY_API_KEY,GROQ_API_KEY,GOOGLE_API_key]
 if not all(all_API):
