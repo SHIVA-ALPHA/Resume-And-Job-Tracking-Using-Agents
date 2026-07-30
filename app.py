@@ -44,6 +44,20 @@ elif all(all_API):
 else:
     st.info("PASS ALL API KEYS")
 
+# MULTISELECT OPTION
+options = ["Delhi","Mumbai","Pune", "Banglore", "Gurugram/Gurgaon"]
+location = st.sidebar.multiselect("Select Location",options = options)
+
+profile_op = ["Data Analysts", "AI Engineer","Gen AI Developer", "Full-Stack Dev","Data Scientist"]
+
+profile = st. sidebar.multiselect("Select Job Profile",
+options = profile_op)
+
+#===============get user info===========================
+
+st.markdown('''#get user info''')
+user_info=st.text_area("""Write your resume description:""")
+
 # ================ MODEL====================
 model = ChatGoogleGenerativeAI(
     model = 'gemini-3.5-flash-lite',
@@ -175,6 +189,14 @@ def get_jobs(agent,
 
     return code
 
+if st.button("Generative Resume"):
+    with st.spinner("Agent running"):
+                code=main_agent(agent,user_info)
+        st.html(code,width="stretch",
+                unsafe_allow_javascript=True)
+st.divider()
+job_code=getjobs(agent,location,profile)
+st.html(job_code,width="stretch",unsafe_allow_javascript=True)
 #==================display code for jobs searching==============
 # """code=get_jobs(agent)
 # DISPLAY.HTML(code)"""
