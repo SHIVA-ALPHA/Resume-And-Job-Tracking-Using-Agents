@@ -31,11 +31,18 @@ st.image("bg.jpg")
 
 # ========API KEYS============# 
 # Step 3 API keys
-TAVILY_API_KEY="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"
-GOOGLE_API_KEY="AQ.Ab8RN6IZJpjfyC0XgDAdvQg6idHs_z7yFnTHOxTFwOs0_HvE5g"
-Groq_API_KEY="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"
+TAVILY_API_KEY=st.sidebar.txt_input("Groq_API",type="password")
+GOOGLE_API_KEY=st.sidebar.txt_input("Groq_API",type="password")
+Groq_API_KEY=st.sidebar.txt_input("Groq_API",type="password")
 
-
+all_API=[TAVILY_API_KEY,GROQ_API_KEY,GOOGLE_API_key]
+if not all(all_API):
+    st.error("must give api key")
+    st.stop()
+elif all(all_API):
+    st.success("API KEY LOADED SUCCESSFULLY")
+else:
+    st.info("PASS ALL API KEYS")
 
 # ================ MODEL====================
 model = ChatGoogleGenerativeAI(
