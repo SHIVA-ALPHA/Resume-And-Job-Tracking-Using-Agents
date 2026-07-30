@@ -11,6 +11,13 @@ from PIL import Image
 import pandas as pd
 import numpy as np
 
+# To Show web-app: complete page layout
+st.set_page_config(layout="wide")
+# To Give Title
+st.title("AI RESUME GENERATOR")
+st.write("""This app helps user to build customized Professional
+Resume with Latest Job apply links""")
+st.image("bg.jpg")
 #=======api key========
 TAVILY_API_KEY="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"
 GOOGLE_API_KEY="AQ.Ab8RN6IZJpjfyC0XgDAdvQg6idHs_z7yFnTHOxTFwOs0_HvE5g"
