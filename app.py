@@ -97,14 +97,14 @@ def main_agent(agent,query):
   final_prompt = prompt + detailed_prompt + user_details
 
 # CODE GENERATION
-  response = agent.invoke({'messages': [{'role':'user','content':final_prompt}]})
+  """response = agent.invoke({'messages': [{'role':'user','content':final_prompt}]})
   code = response['messages' ] [-1].content[-1] ['text' ]
-  return code
+  return code"""
 
 #==============display code (resume)=========
-'''code = main_agent(agent, "ALAN TURING, GEN AI EXPERT")
+"""code = main_agent(agent, "ALAN TURING, GEN AI EXPERT")
 from IPython import display as DISPLAY
-DISPLAY.HTML(code)'''
+DISPLAY.HTML(code)"""
 
 #==================job_searching code================ 
 def get_jobs(agent,
@@ -123,5 +123,5 @@ def get_jobs(agent,
     return code
 
 #==================display code for jobs searching==============
-'''code=get_jobs(agent)
-DISPLAY.HTML(code)'''
+"""code=get_jobs(agent)
+DISPLAY.HTML(code)"""
