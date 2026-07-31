@@ -27,7 +27,7 @@ Resume with Latest Job apply links""")
 st.image("https://raw.githubusercontent.com/SHIVA-ALPHA/Resume-And-Job-Tracking-Using-Agents/refs/heads/main/bg.jpg")
 
 st.sidebar.title("Fill Important Details")
-st.sidebar.image("")
+st.sidebar.image("https://raw.githubusercontent.com/SHIVA-ALPHA/Resume-And-Job-Tracking-Using-Agents/refs/heads/main/bg.jpg")
 
 
 
