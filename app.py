@@ -24,7 +24,7 @@ st.title("AI RESUME GENERATOR")
 st.write("""This app helps user to build customized Professional
 Resume with Latest Job apply links""")
 
-st.image("bg.jpg")
+st.image("https://raw.githubusercontent.com/SHIVA-ALPHA/Resume-And-Job-Tracking-Using-Agents/refs/heads/main/bg.jpg")
 
 
 
